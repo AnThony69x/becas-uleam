@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.encabezado-recuperar-contraseña {
+    position: relative;
+    background-image: url('../assets/encabezadoUleam.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.cubrir-recuperar-contraseña {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.encabezado-recuperar-contraseña h1 {
+    position: relative;
+    z-index: 1;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.logo-contenedor-recuperar-contraseña {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.logo-recuperar-contraseña {
+    width: 250px;
+    height: auto;
+}
+
+.cuerpo-recuperar-contraseña {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.recuperar-contraseña-form {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    text-align: center;
+}
+
+.recuperar-contraseña-form p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+
+.button-recuperar-contraseña {
+    width: 100%;
+    padding: 12px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.button-recuperar-contraseña:hover {
+    background-color: #0056b3;
+}
+
+.footer-recuperar-contraseña {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 1.1rem;
+    margin-top: 30px;
+}
+
+.footer-recuperar-contraseña .creado-recuperar-contraseña p {
+    margin: 0;
+}
+
+.enlace-recuperar-contraseña {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+.enlace-recuperar-contraseña:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.mensaje {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.mensaje.success {
+    color: #28a745;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+}
+
+.mensaje.error {
+    color: #dc3545;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    font-size: 0.85rem;
+}

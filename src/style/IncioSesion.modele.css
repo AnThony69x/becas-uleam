@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.encabezado-incio-sesion {
+    position: relative;
+    background-image: url('../assets/encabezadoUleam.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.cubrir-incio-sesion {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.encabezado-incio-sesion h1 {
+    position: relative;
+    z-index: 1;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.logo-contenedor-incio-sesion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0; 
+}
+
+.logo-incio-sesion {
+    width: 250px;
+    height: auto;
+}
+
+.cuerpo-inicio-sesion {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.form-incio-sesion {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 320px;
+}
+
+.formulario-incio-sesion {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.button-incio-sesion {
+    width: 100%;
+    padding: 12px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.recuperar-contraseña-incio-sesion {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.recuperar-contraseña-incio-sesion a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.recuperar-contraseña-incio-sesion a:hover {
+    text-decoration: underline;
+}
+
+.footer-incio-sesion {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 1.1rem;
+    margin-top: 30px; 
+}
+
+.creado-incio-sesion p {
+    margin: 0;
+}
+
+.enlace-incio-sesion {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.enlace-incio-sesion:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}

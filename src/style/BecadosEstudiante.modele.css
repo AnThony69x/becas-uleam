@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.encabezado-becados-estudiante {
+    position: relative;
+    background-image: url('../assets/encabezadoUleam.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.cubrir-becados-estudiante {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.encabezado-becados-estudiante h1 {
+    position: relative;
+    z-index: 1;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.logo-contenedor-becados-estudiante {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0; 
+}
+
+.logo-becados-estudiante {
+    width: 250px;
+    height: auto;
+}
+
+.boton-cerrar-sesion-becados-estudiante {
+    position: absolute;
+    top: 20px; 
+    right: 20px; 
+}
+
+.button-cerrar-sesion-becados-estudiante {
+    padding: 10px 20px;
+    background-color: #007BFF; 
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem; 
+    transition: background-color 0.3s;
+}
+
+.button-cerrar-sesion-becados-estudiante:hover {
+    background-color: #c00; 
+}
+
+.cuerpo-becados-estudiante {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.menu-becados-estudiante {
+    background-color: white;
+    padding: 60px; /* Aumenté el padding para más espacio interno */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 2000px; /* Aumenté el ancho para que sea más grande */
+    text-align: center;
+}
+
+.menu-becados-estudiante p {
+    font-size: 2rem; /* Aumenté el tamaño de la fuente */
+    margin-bottom: 30px; /* Más espacio debajo */
+    font-weight: bold;
+    color: #333;
+}
+
+
+.persona-texto-becados-estudiante {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.icono-persona-becados-estudiante {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+
+.comunicaciones-becados-estudiante p {
+    margin: 0;
+    font-family: monospace; 
+    letter-spacing: 1px;  
+}
+
+.footer-becados-estudiante {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+    font-size: 1.1rem;
+    margin-top: 30px;
+}
+
+.footer-becados-estudiante .creado-becados-estudiante p {
+    margin: 0;
+}
+
+.footer-becados-estudiante .enlace-becados-estudiante {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-becados-estudiante .enlace-becados-estudiante:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}

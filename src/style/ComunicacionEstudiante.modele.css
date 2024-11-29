@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.encabezado-comunicacion-estudiante {
+    position: relative;
+    background-image: url('../assets/encabezadoUleam.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.cubrir-comunicacion-estudiante {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.encabezado-comunicacion-estudiante h1 {
+    position: relative;
+    z-index: 1;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.logo-contenedor-comunicacion-estudiante {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.logo-comunicacion-estudiante {
+    width: 250px;
+    height: auto;
+}
+
+.boton-cerrar-sesion-comunicacion-estudiante {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.button-cerrar-sesion-comunicacion-estudiante {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.button-cerrar-sesion-comunicacion-estudiante:hover {
+    background-color: #c00;
+}
+
+.cuerpo-comunicacion-estudiante {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.menu-comunicacion-estudiante {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    text-align: center;
+}
+
+.menu-comunicacion-estudiante p {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.icono-campana-comunicacion-estudiante {
+    width: 80px;
+    height: 80px;
+}
+
+.footer-comunicacion-estudiante {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+    font-size: 1.1rem;
+    margin-top: 30px;
+}
+
+.footer-comunicacion-estudiante .creado-comunicacion-estudiante p {
+    margin: 0;
+}
+
+.footer-comunicacion-estudiante .enlace-comunicacion-estudiante {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-comunicacion-estudiante .enlace-comunicacion-estudiante:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
