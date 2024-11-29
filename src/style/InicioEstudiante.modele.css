@@ -1,3 +1,4 @@
+/* Base general */
 * {
     margin: 0;
     padding: 0;
@@ -13,6 +14,7 @@ body {
     min-height: 100vh;
 }
 
+/* Encabezado */
 .encabezado-inicio-estudiante {
     position: relative;
     background-image: url('../assets/encabezadoUleam.jpg');
@@ -37,10 +39,11 @@ body {
 .encabezado-inicio-estudiante h1 {
     position: relative;
     z-index: 1;
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-align: center;
 }
 
+/* Logo */
 .logo-contenedor-inicio-estudiante {
     display: flex;
     justify-content: center;
@@ -49,31 +52,33 @@ body {
 }
 
 .logo-inicio-estudiante {
-    width: 250px;
+    width: 200px;
     height: auto;
 }
 
+/* Botón cerrar sesión */
 .boton-cerrar-sesion-inicio-estudiante {
     position: absolute;
-    top: 20px; 
-    right: 20px; 
+    top: 20px;
+    right: 20px;
 }
 
 .boton-cerrar-sesion-inicio-estudiante .button-cerrar-sesion-inicio-estudiante {
     padding: 10px 20px;
-    background-color: #007BFF; 
+    background-color: #007BFF;
     color: #fff;
     border: none;
     cursor: pointer;
     border-radius: 5px;
-    font-size: 1rem; 
+    font-size: 1rem;
     transition: background-color 0.3s;
 }
 
 .boton-cerrar-sesion-inicio-estudiante .button-cerrar-sesion-inicio-estudiante:hover {
-    background-color: #c00; 
+    background-color: #c00;
 }
 
+/* Cuerpo */
 .cuerpo-inicio-estudiante {
     flex: 1;
     display: flex;
@@ -82,16 +87,18 @@ body {
     padding: 40px 20px;
 }
 
+/* Menú */
 .menu-inicio-estudiante {
     background-color: white;
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    width: 1000px;
+    width: 100%;
+    max-width: 1000px;
     text-align: center;
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .menu-inicio-estudiante p {
@@ -102,36 +109,38 @@ body {
 }
 
 .becas-menu-inicio-estudiante {
-    display: flex; 
-    justify-content: center; 
-    margin-top: 20px; 
-    width: 100%; 
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+    flex-wrap: wrap;
 }
 
 button {
-    flex: 1; 
-    padding: 40px;
+    flex: 1;
+    padding: 20px;
     background-color: #007BFF;
     color: white;
     border: none;
     border-radius: 5px;
     font-size: 1rem;
     cursor: pointer;
-    margin: 0 5px; 
-    transition: background-color 0.3s; 
+    margin: 10px;
+    transition: background-color 0.3s;
 }
 
 button:hover {
     background-color: #0056b3;
 }
 
+/* Footer */
 .footer-inicio-estudiante {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 15px 0;
     width: 100%;
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin-top: 30px;
 }
 
@@ -148,4 +157,57 @@ button:hover {
 .footer-inicio-estudiante .enlace-inicio-estudiante:hover {
     color: #0056b3;
     text-decoration: underline;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .encabezado-inicio-estudiante h1 {
+        font-size: 2rem;
+    }
+
+    .menu-inicio-estudiante {
+        padding: 20px;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 15px;
+    }
+
+    .logo-inicio-estudiante {
+        width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .encabezado-inicio-estudiante {
+        height: 200px;
+    }
+
+    .encabezado-inicio-estudiante h1 {
+        font-size: 1.5rem;
+    }
+
+    .menu-inicio-estudiante {
+        padding: 15px;
+    }
+
+    .becas-menu-inicio-estudiante {
+        flex-direction: column;
+    }
+
+    button {
+        font-size: 0.75rem;
+        padding: 10px;
+        margin: 5px 0;
+    }
+
+    .logo-inicio-estudiante {
+        width: 120px;
+    }
+
+    .boton-cerrar-sesion-inicio-estudiante .button-cerrar-sesion-inicio-estudiante {
+        font-size: 0.75rem;
+        padding: 8px 15px;
+    }
 }
