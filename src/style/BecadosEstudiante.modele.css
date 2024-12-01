@@ -61,7 +61,7 @@ body {
     transition: transform 0.3s;
 }
 
-.logo-postulacion-estudiante:hover {
+.logo-becados-estudiante:hover {
     transform: scale(1.1);
 }
 
@@ -214,4 +214,57 @@ body {
 
 .persona-texto-becados-estudiante.rechazado:hover {
     transform: scale(1.02); /* Ligera ampliación */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .encabezado-becados-estudiante h1 {
+        font-size: 2.5rem;
+    }
+
+    .menu-becados-estudiante {
+        padding: 30px;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 15px;
+    }
+
+    .logo-becados-estudiante {
+        width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .encabezado-becados-estudiante {
+        height: 200px;
+    }
+
+    .encabezado-becados-estudiante h1 {
+        font-size: 1.8rem;
+    }
+
+    .menu-becados-estudiante {
+        padding: 20px;
+    }
+
+    .becas-menu-becados-estudiante {
+        flex-direction: column;
+    }
+
+    button {
+        font-size: 0.8rem;
+        padding: 10px;
+        margin: 5px 0;
+    }
+
+    .logo-becados-estudiante {
+        width: 120px;
+    }
+
+    .button-cerrar-sesion-becados-estudiante {
+        font-size: 0.85rem;
+        padding: 8px 15px;
+    }
 }
