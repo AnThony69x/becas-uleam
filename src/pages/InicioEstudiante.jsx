@@ -41,8 +41,7 @@ const InicioEstudiante = () => {
                             Becas
                         </button>
                         <button onClick={() => navigate('/postulacion-estudiante')}>Postulación</button>
-                        <button onClick={() => navigate('/comunicacion-estudiante')}>Comunicaciones</button>
-                        <button onClick={() => navigate('/becados-estudiante')}>Becados</button>
+                        <button onClick={() => navigate('/busqueda-estudiante')}>Busqueda</button>
                     </div>
                 </div>
             </main>

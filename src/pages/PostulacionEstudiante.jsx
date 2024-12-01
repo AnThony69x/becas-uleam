@@ -11,6 +11,7 @@ const PostulacionEstudiante = () => {
         fechaNacimiento: '',
         nombre: '',
         apellido: '',
+        cedula: '', // Nuevo campo
         carrera: '',
         colegioGraduado: '',
         notaGrado: '',
@@ -23,13 +24,9 @@ const PostulacionEstudiante = () => {
 
     const [esMayorDeEdad, setEsMayorDeEdad] = useState(true);
     const [mensajeEdad, setMensajeEdad] = useState('');
-    const [mensaje, setMensaje] = useState(''); // Agregado para manejar los mensajes de confirmación
+    const [mensaje, setMensaje] = useState('');
 
     useEffect(() => {
-        const postulacionesGuardadas = JSON.parse(localStorage.getItem('postulacionesEstudiantes')) || [];
-        if (!postulacionesGuardadas.length) {
-            console.log('No hay postulaciones guardadas en localStorage.');
-        }
         gestionarFormularioPostulacion();
     }, []);
 
@@ -78,15 +75,28 @@ const PostulacionEstudiante = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const postulacionEstudiante = { id: Date.now(), ...formData };
+
+        // Obtener postulaciones guardadas
         const postulacionesGuardadas = JSON.parse(localStorage.getItem('postulacionesEstudiantes')) || [];
+
+        // Verificar duplicados
+        const existeDuplicado = postulacionesGuardadas.some(postulacion => 
+            postulacion.nombre.toLowerCase() === formData.nombre.toLowerCase() &&
+            postulacion.apellido.toLowerCase() === formData.apellido.toLowerCase() &&
+            postulacion.cedula === formData.cedula
+        );
+
+        if (existeDuplicado) {
+            setMensaje('Error: Ya existe una postulación con este nombre, apellido y cédula.');
+            setTimeout(() => setMensaje(''), 5000);
+            return;
+        }
+
+        // Agregar nueva postulación
+        const postulacionEstudiante = { id: Date.now(), ...formData };
         postulacionesGuardadas.push(postulacionEstudiante);
         localStorage.setItem('postulacionesEstudiantes', JSON.stringify(postulacionesGuardadas));
 
-        const usuario = JSON.parse(localStorage.getItem('usuario')) || {};
-        usuario.id = postulacionEstudiante.id;
-        localStorage.setItem('usuario', JSON.stringify(usuario));
-        
         setMensaje('¡La postulación ha sido enviada exitosamente!');
         setFormData({
             periodo: '',
@@ -94,6 +104,7 @@ const PostulacionEstudiante = () => {
             fechaNacimiento: '',
             nombre: '',
             apellido: '',
+            cedula: '',
             carrera: '',
             colegioGraduado: '',
             notaGrado: '',
@@ -103,7 +114,7 @@ const PostulacionEstudiante = () => {
             tipoBecasTenido: '',
             porquePostulaBeca: '',
         });
-        setTimeout(() => setMensaje(''), 5000);
+        setTimeout(() => setMensaje(''), 9000);
     };
 
     return (
@@ -169,8 +180,8 @@ const PostulacionEstudiante = () => {
                                 value={formData.nombre} 
                                 onChange={handleChange} 
                                 required 
-                                pattern="[A-Za-z\s]+" 
-                                title="Solo se permiten letras y espacios" 
+                                pattern="[A-Za-zñÑáéíóúÁÉÍÓÚ\s]+" 
+                                title="Solo se permiten letras, espacios y caracteres especiales como ñ y acentos" 
                             />
 
                             <label htmlFor="apellido-postulacion-estudiante">Apellidos*:</label>
@@ -181,9 +192,22 @@ const PostulacionEstudiante = () => {
                                 value={formData.apellido} 
                                 onChange={handleChange} 
                                 required 
-                                pattern="[A-Za-z\s]+" 
-                                title="Solo se permiten letras y espacios" 
+                                pattern="[A-Za-zñÑáéíóúÁÉÍÓÚ\s]+" 
+                                title="Solo se permiten letras, espacios y caracteres especiales como ñ y acentos" 
                             />
+
+                            <label htmlFor="cedula-postulacion-estudiante">Cédula*:</label>
+                            <input 
+                                type="text" 
+                                id="cedula-postulacion-estudiante" 
+                                name="cedula" 
+                                value={formData.cedula} 
+                                onChange={handleChange} 
+                                required 
+                                pattern="\d{10}" 
+                                title="La cédula debe contener exactamente 10 dígitos numéricos." 
+                            />
+
 
                             <label htmlFor="carrera-postulacion-estudiante">Carrera de cual postula*:</label>
                             <input
@@ -193,8 +217,8 @@ const PostulacionEstudiante = () => {
                             value={formData.carrera}
                             onChange={handleChange}
                             required 
-                            pattern="[A-Za-z\s]+"
-                            title="Solo se permiten letras y espacios" 
+                            pattern="[A-Za-zñÑáéíóúÁÉÍÓÚ\s]+"
+                            title="Solo se permiten letras, espacios y caracteres especiales como ñ y acentos" 
                             />
 
                             <label htmlFor="colegio-graduado-postulacion-estudiante">Colegio del cual se graduó*:</label>
@@ -205,8 +229,8 @@ const PostulacionEstudiante = () => {
                                 value={formData.colegioGraduado} 
                                 onChange={handleChange} 
                                 required 
-                                pattern="[A-Za-z\s]+" 
-                                title="Solo se permiten letras y espacios" 
+                                pattern="[A-Za-zñÑáéíóúÁÉÍÓÚ\s]+" 
+                                title="Solo se permiten letras, espacios y caracteres especiales como ñ y acentos" 
                             />
 
                             <label htmlFor="nota-grado-postulacion-estudiante">Nota de Grado*:</label>
@@ -299,6 +323,7 @@ const PostulacionEstudiante = () => {
                                 fechaNacimiento: '',
                                 nombre: '',
                                 apellido: '',
+                                cedula: '',
                                 carrera: '',
                                 colegioGraduado: '',
                                 notaGrado: '',
@@ -310,9 +335,7 @@ const PostulacionEstudiante = () => {
                             })}>Restablecer</button>
                         </form>
                         
-                        {mensaje && <p className="mensaje-confirmacion">{mensaje}</p>}
-                        <div className='confirmacion-mensaje'><p>Una vez enviado la postulacion, no volver a enviado caso contrario se tomara como anula su postulación!</p></div>
-                    
+                        {mensaje && <p className="mensaje-confirmacion">{mensaje}</p>}                    
                     </div>
                 </div>
             </main>

@@ -1,3 +1,4 @@
+/* Reset y estilo base para asegurar consistencia */
 * {
     margin: 0;
     padding: 0;
@@ -5,14 +6,15 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(120deg, #f4f4f9, #e2e8f0);
     color: #333;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
+/* Estilo del encabezado */
 .encabezado-becados-estudiante {
     position: relative;
     background-image: url('../assets/encabezadoUleam.jpg');
@@ -23,6 +25,8 @@ body {
     justify-content: center;
     align-items: center;
     color: white;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .cubrir-becados-estudiante {
@@ -31,7 +35,8 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 0 0 20px 20px;
 }
 
 .encabezado-becados-estudiante h1 {
@@ -39,20 +44,29 @@ body {
     z-index: 1;
     font-size: 3rem;
     text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+/* Estilo para el logo */
 .logo-contenedor-becados-estudiante {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 30px 0; 
+    margin: 20px 0;
 }
 
 .logo-becados-estudiante {
     width: 250px;
     height: auto;
+    transition: transform 0.3s;
 }
 
+.logo-postulacion-estudiante:hover {
+    transform: scale(1.1);
+}
+
+
+/* Estilo para el botón de cierre de sesión */
 .boton-cerrar-sesion-becados-estudiante {
     position: absolute;
     top: 20px; 
@@ -61,19 +75,22 @@ body {
 
 .button-cerrar-sesion-becados-estudiante {
     padding: 10px 20px;
-    background-color: #007BFF; 
+    background: linear-gradient(120deg, #007BFF, #0056b3);
     color: #fff;
     border: none;
     cursor: pointer;
-    border-radius: 5px;
-    font-size: 1rem; 
-    transition: background-color 0.3s;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .button-cerrar-sesion-becados-estudiante:hover {
-    background-color: #c00; 
+    background: linear-gradient(120deg, #c00, #900);
+    transform: scale(1.05)
 }
 
+/* Estilo del cuerpo */
 .cuerpo-becados-estudiante {
     flex: 1;
     display: flex;
@@ -82,23 +99,25 @@ body {
     padding: 40px 20px;
 }
 
+/* Estilo del menú */
 .menu-becados-estudiante {
-    background-color: white;
-    padding: 60px; /* Aumenté el padding para más espacio interno */
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    width: 2000px; /* Aumenté el ancho para que sea más grande */
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    width: 2000px;
     text-align: center;
 }
 
 .menu-becados-estudiante p {
-    font-size: 2rem; /* Aumenté el tamaño de la fuente */
-    margin-bottom: 30px; /* Más espacio debajo */
+    font-size: 1.8rem;
+    margin-bottom: 20px;
     font-weight: bold;
     color: #333;
 }
 
-
+/* Estilo de la persona */
 .persona-texto-becados-estudiante {
     display: flex;
     align-items: center;
@@ -113,18 +132,19 @@ body {
 
 .comunicaciones-becados-estudiante p {
     margin: 0;
-    font-family: monospace; 
+    font-family: monospace;
     letter-spacing: 1px;  
 }
 
+/* Estilo del pie de página */
 .footer-becados-estudiante {
-    background-color: #333;
+    background: #333;
     color: white;
     text-align: center;
-    padding: 15px 0;
-    width: 100%;
+    padding: 20px;
     font-size: 1.1rem;
     margin-top: 30px;
+    border-radius: 20px 20px 0 0;
 }
 
 .footer-becados-estudiante .creado-becados-estudiante p {
@@ -140,4 +160,58 @@ body {
 .footer-becados-estudiante .enlace-becados-estudiante:hover {
     color: #0056b3;
     text-decoration: underline;
+}
+
+/* Estilo para el buscador */
+.buscador-becados-estudiante {
+    width: 100%;
+    max-width: 500px;
+    padding: 15px;
+    font-size: 1rem;
+    border: 2px solid #007BFF;
+    border-radius: 30px;
+    outline: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #333;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.buscador-becados-estudiante::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+.buscador-becados-estudiante:focus {
+    border-color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para los becados */
+.persona-texto-becados-estudiante.becado {
+    background-color: #d4f8d4; /* Verde claro */
+    border: 1px solid #a6d6a6;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    transition: transform 0.2s ease;
+}
+
+.persona-texto-becados-estudiante.becado:hover {
+    transform: scale(1.02); /* Ligera ampliación */
+}
+
+/* Estilo para los rechazados */
+.persona-texto-becados-estudiante.rechazado {
+    background-color: #f8d4d4; /* Rojo claro */
+    border: 1px solid #d6a6a6;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    transition: transform 0.2s ease;
+}
+
+.persona-texto-becados-estudiante.rechazado:hover {
+    transform: scale(1.02); /* Ligera ampliación */
 }

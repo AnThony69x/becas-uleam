@@ -79,6 +79,7 @@ const AdministradorPostulaciones = () => {
                             postulaciones.map((postulacion, index) => (
                                 <li key={postulacion.id} style={{ border: '1px solid #ccc', padding: '10px', marginBottom: '10px' }}>
                                     <p><strong>Nombre:</strong> {postulacion.nombre} {postulacion.apellido}</p>
+                                    <p><strong>Cédula:</strong> {postulacion.cedula}</p>
                                     <p><strong>Fecha de Nacimiento:</strong> {postulacion.fechaNacimiento}</p>
                                     <p><strong>Periodo Académico:</strong> {postulacion.periodo}</p>
                                     <p><strong>Beca:</strong> {postulacion.beca}</p>

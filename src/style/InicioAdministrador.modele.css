@@ -6,8 +6,8 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(120deg, #f4f4f9, #e2e8f0);
     color: #333;
     display: flex;
     flex-direction: column;
@@ -25,6 +25,8 @@ body {
     justify-content: center;
     align-items: center;
     color: white;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .cubrir-inicio-administrador {
@@ -33,7 +35,8 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 0 0 20px 20px;
 }
 
 .encabezado-inicio-administrador h1 {
@@ -41,6 +44,7 @@ body {
     z-index: 1;
     font-size: 3rem;
     text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* Logo */
@@ -52,30 +56,37 @@ body {
 }
 
 .logo-inicio-administrador {
-    width: 250px;
+    width: 220px;
     height: auto;
+    transition: transform 0.3s;
+}
+
+.logo-inicio-administrador:hover {
+    transform: scale(1.1);
 }
 
 /* Botón cerrar sesión */
 .boton-cerrar-sesion-inicio-administrador {
     position: absolute;
-    top: 20px; 
-    right: 20px; 
+    top: 20px;
+    right: 20px;
 }
 
 .boton-cerrar-sesion-inicio-administrador .button-cerrar-sesion-inicio-administrador {
-    padding: 10px 20px;
-    background-color: #007BFF; 
-    color: #fff;
+    padding: 12px 24px;
+    background: linear-gradient(120deg, #007BFF, #0056b3);
+    color: white;
     border: none;
+    border-radius: 20px;
     cursor: pointer;
-    border-radius: 5px;
-    font-size: 1rem; 
-    transition: background-color 0.3s;
+    font-size: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
 }
 
 .boton-cerrar-sesion-inicio-administrador .button-cerrar-sesion-inicio-administrador:hover {
-    background-color: #c00; 
+    background: linear-gradient(120deg, #c00, #900);
+    transform: scale(1.05);
 }
 
 /* Cuerpo */
@@ -89,63 +100,61 @@ body {
 
 /* Menú */
 .menu-inicio-administrador {
-    background-color: white;
+    background: white;
     padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 1000px;
+    max-width: 900px;
     text-align: center;
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .menu-inicio-administrador p {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     margin-bottom: 20px;
     font-weight: bold;
-    color: #333;
+    color: #444;
 }
 
 .becas-menu-inicio-administrador {
-    display: flex; 
-    justify-content: center; 
-    margin-top: 20px; 
-    width: 100%; 
+    display: flex;
+    justify-content: center;
     flex-wrap: wrap;
+    gap: 15px;
+    width: 100%;
+    margin-top: 20px;
 }
 
 button {
-    flex: 1; 
-    padding: 40px;
-    background-color: #007BFF;
+    flex: 1;
+    padding: 15px 25px;
+    background: linear-gradient(120deg, #007BFF, #0056b3);
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 15px;
     font-size: 1rem;
     cursor: pointer;
-    margin: 10px;
-    transition: background-color 0.3s; 
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 button:hover {
-    background-color: #0056b3;
+    background: linear-gradient(120deg, #0056b3, #007BFF);
+    transform: translateY(-3px);
 }
 
 /* Footer */
 .footer-inicio-administrador {
-    background-color: #333;
+    background: #333;
     color: white;
     text-align: center;
-    padding: 15px 0;
-    width: 100%;
+    padding: 20px;
     font-size: 1.1rem;
     margin-top: 30px;
-}
-
-.footer-inicio-administrador .creado-inicio-administrador p {
-    margin: 0;
+    border-radius: 20px 20px 0 0;
 }
 
 .footer-inicio-administrador .enlace-inicio-administrador {
@@ -166,16 +175,15 @@ button:hover {
     }
 
     .menu-inicio-administrador {
-        padding: 20px;
+        padding: 30px;
     }
 
     button {
         font-size: 0.9rem;
-        padding: 20px;
     }
 
     .logo-inicio-administrador {
-        width: 200px;
+        width: 180px;
     }
 }
 
@@ -189,25 +197,15 @@ button:hover {
     }
 
     .menu-inicio-administrador {
-        padding: 15px;
-    }
-
-    .becas-menu-inicio-administrador {
-        flex-direction: column;
+        padding: 20px;
     }
 
     button {
-        font-size: 0.75rem;
-        padding: 10px;
-        margin: 5px 0;
+        font-size: 0.8rem;
+        padding: 10px 15px;
     }
 
     .logo-inicio-administrador {
-        width: 120px;
-    }
-
-    .boton-cerrar-sesion-inicio-administrador .button-cerrar-sesion-inicio-administrador {
-        font-size: 0.75rem;
-        padding: 8px 15px;
+        width: 140px;
     }
 }

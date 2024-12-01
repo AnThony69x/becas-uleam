@@ -6,12 +6,12 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(120deg, #f4f4f9, #e2e8f0);
     color: #333;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Asegura que el body ocupe toda la altura */
+    min-height: 100vh;
 }
 
 /* Encabezado */
@@ -20,12 +20,13 @@ body {
     background-image: url('../assets/encabezadoUleam.jpg');
     background-size: cover;
     background-position: center;
-    height: 300px;
+    height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
-    padding: 20px; /* Añadido para mejorar la presentación */
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .cubrir-postulacion-administrador {
@@ -34,15 +35,16 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 0 0 20px 20px;
 }
 
 .encabezado-postulacion-administrador h1 {
     position: relative;
     z-index: 1;
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-align: center;
-    margin: 0; /* Asegura que no haya margen extra */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* Logo */
@@ -54,11 +56,16 @@ body {
 }
 
 .logo-postulacion-administrador {
-    width: 250px;
+    width: 200px;
     height: auto;
+    transition: transform 0.3s;
 }
 
-/* Botón de Cerrar sesión */
+.logo-postulacion-administrador:hover {
+    transform: scale(1.1);
+}
+
+/* Botón de cerrar sesión */
 .boton-cerrar-sesion-postulacion-administrador {
     position: absolute;
     top: 20px;
@@ -67,102 +74,71 @@ body {
 
 .boton-cerrar-sesion-postulacion-administrador .button-cerrar-sesion-postulacion-administrador {
     padding: 10px 20px;
-    background-color: #007BFF;
-    color: #fff;
+    background: linear-gradient(120deg, #007BFF, #0056b3);
+    color: white;
     border: none;
+    border-radius: 20px;
     cursor: pointer;
-    border-radius: 5px;
     font-size: 1rem;
-    transition: background-color 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
 }
 
 .boton-cerrar-sesion-postulacion-administrador .button-cerrar-sesion-postulacion-administrador:hover {
-    background-color: #c00;
+    background: linear-gradient(120deg, #c00, #900);
+    transform: scale(1.05);
 }
 
 /* Cuerpo */
+
 .cuerpo-posculacion-administrador {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 40px 20px;
-    min-height: 60vh; /* Asegura que el cuerpo ocupe al menos el 60% de la altura de la pantalla */
+    background-color: #fff;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .menu-postulacion-administrador {
     background-color: #fff;
     width: 100%;
-    max-width: 900px; /* Límite máximo de ancho */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
+    max-width: 1000px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-out;
 }
 
-.postulacion-item {
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-    border-bottom: 2px solid #ddd; /* Mejorado el borde para un aspecto más definido */
-}
-
-.postulacion-item p {
-    margin: 5px 0;
-}
-
+/* Textarea */
 textarea {
     width: 100%;
-    height: 100px; 
+    height: 100px;
     padding: 12px;
-    margin-top: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
     font-size: 1rem;
-    transition: border-color 0.3s;
-    overflow-y: auto; 
-    resize: none; 
+    transition: box-shadow 0.3s;
+    resize: none;
 }
 
-/* Mensaje de acción (mensaje enviado) */
-.mensaje-accion {
-    background-color: #28a745; /* Color verde para indicar éxito */
-    color: white;
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    font-size: 1.1rem;
-    text-align: center; /* Centra el mensaje */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade sombra para darle un toque más elevado */
-    animation: fadeIn 0.5s ease-out; /* Agrega una animación suave al aparecer */
+textarea:focus {
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+    border-color: #007BFF;
 }
-
-/* Animación de aparición */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 
 /* Footer */
 .footer-postulacion-administrador {
-    background-color: #333;
+    background: #333;
     color: white;
     text-align: center;
-    padding: 15px 0;
-    width: 100%;
+    padding: 20px;
     font-size: 1.1rem;
     margin-top: 30px;
-    position: relative;
-}
-
-.footer-postulacion-administrador .creado-postulacion-administrador p {
-    margin: 0;
+    border-radius: 20px 20px 0 0;
 }
 
 .footer-postulacion-administrador .enlace-postulacion-administrador {
@@ -176,43 +152,35 @@ textarea {
     text-decoration: underline;
 }
 
-/* Ajustes para pantallas pequeñas (Responsivo) */
-@media screen and (max-width: 768px) {
+/* Media Queries */
+@media (max-width: 768px) {
     .encabezado-postulacion-administrador h1 {
-        font-size: 2rem; /* Reducir el tamaño de la fuente en pantallas pequeñas */
+        font-size: 2rem;
     }
 
     .menu-postulacion-administrador {
-        width: 90%; /* Hacer que el contenedor ocupe más espacio en pantallas pequeñas */
-    }
-
-    .logo-postulacion-administrador {
-        width: 200px; /* Reducir el tamaño del logo */
-    }
-
-    .cuerpo-posculacion-administrador {
         padding: 20px;
     }
 
-    .footer-postulacion-administrador {
-        font-size: 1rem; /* Ajustar el tamaño de la fuente en el pie de página */
+    .logo-postulacion-administrador {
+        width: 180px;
     }
 }
 
-@media screen and (max-width: 480px) {
-    .encabezado-postulacion-administrador h1 {
-        font-size: 1.5rem; /* Reducir más el tamaño en pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .encabezado-postulacion-administrador {
+        height: 200px;
     }
 
-    .logo-postulacion-administrador {
-        width: 180px; /* Reducir aún más el logo en pantallas muy pequeñas */
+    .encabezado-postulacion-administrador h1 {
+        font-size: 1.5rem;
     }
 
     .menu-postulacion-administrador {
-        width: 95%;
+        padding: 20px;
     }
 
-    .footer-postulacion-administrador {
-        font-size: 0.9rem;
+    .logo-postulacion-administrador {
+        width: 140px;
     }
 }

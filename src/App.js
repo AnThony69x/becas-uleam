@@ -6,7 +6,6 @@ import RecuperarContraseña from './pages/RecuperarContraseña';
 import InicioEstudiante from './pages/InicioEstudiante';
 import InicioAdministrador from './pages/InicioAdministrador';
 import PostulacionEstudiante from './pages/PostulacionEstudiante';
-import ComunicacionEstudiante from './pages/ComunicacionEstudiante';
 import BecadosEstudiante from './pages/BecadosEstudiante';
 import PostulacionAdministrador from './pages/PostulacionAdministrador';
 import RechazadosAdministrador from './pages/RechazadosAdministrador';
@@ -22,8 +21,7 @@ function App() {
         <Route path="/inicio-estudiante" element={<InicioEstudiante />} />
         <Route path="/inicio-administrador" element={<InicioAdministrador />} />
         <Route path="/postulacion-estudiante" element={<PostulacionEstudiante />} />
-        <Route path="/comunicacion-estudiante" element={<ComunicacionEstudiante />} />
-        <Route path="/becados-estudiante" element={<BecadosEstudiante />} />
+        <Route path="/busqueda-estudiante" element={<BecadosEstudiante />} />
         <Route path="/postulacion-administrador" element={<PostulacionAdministrador />} />
         <Route path="/rechazados-administrador" element={<RechazadosAdministrador />} />
         <Route path="/becados-administrador" element={<BecadosAdministrador />} />
